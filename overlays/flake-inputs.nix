@@ -1,5 +1,5 @@
 {inputs, ...}:
-# For every flake input, aliases on of
+# For every flake input, aliases one of
 # - 'inputs.${flake}.packages.${pkgs.system}'
 # - 'inputs.${flake}.legacyPackages.${pkgs.system}'
 # to 'pkgs.inputs.${flake}'
