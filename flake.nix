@@ -22,13 +22,13 @@
         # My custom modules
         nixosModules = import ./modules/nixos;
         homeManagerModules = import ./modules/home;
-
-        # My custom overlays
-        overlays = import ./overlays {inherit inputs;};
       }
     )
     # System-independent ouputs
     // {
+      # My custom overlays
+      overlays = import ./overlays {inherit inputs;};
+
       templates = import ./templates;
     };
 }
