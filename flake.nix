@@ -11,6 +11,7 @@
     flake-utils,
     ...
   } @ inputs:
+  # System-specific outputs
     flake-utils.lib.eachDefaultSystem (
       system: let
         pkgs = nixpkgs.legacyPackages.${system};
@@ -26,6 +27,7 @@
         overlays = import ./overlays {inherit inputs;};
       }
     )
+    # System-independent ouputs
     // {
       templates = import ./templates;
     };
